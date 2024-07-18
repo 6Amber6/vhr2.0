@@ -1,5 +1,5 @@
 spring:
   datasource:
     username: root
-    password: 123
-    url: jdbc:mysql://localhost:33061/vhr2024?serverTimezone=Asia/Shanghai
+    password: 030115Lt!
+    url: jdbc:mysql://localhost:3306/vhr2024?serverTimezone=Asia/Shanghai
