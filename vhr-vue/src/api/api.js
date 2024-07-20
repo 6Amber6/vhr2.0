@@ -63,20 +63,7 @@ import request from "@/utils/request.js";
 //         data: params
 //     })
 // }
-export const getRequest = (url, params) => {
-    return request({
-        method: 'get',
-        url: `${base}${url}`,
-        params: params
-    })
-}
 
-export function loadMenus() {
-    return request({
-        url: '/api/menus',
-        method: 'get'
-    })
-}
 // export const deleteRequest = (url, params) => {
 //     return axios({
 //         method: 'delete',
