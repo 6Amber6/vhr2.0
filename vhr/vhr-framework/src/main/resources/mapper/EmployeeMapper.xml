@@ -63,6 +63,24 @@
     select max(workID) from employee
   </select>
     <resultMap id="EmployeeWithSalary" type="org.javaboy.vhr.framework.entity.Employee" extends="BaseResultMap">
+        <result column="id_card" property="idCard" jdbcType="VARCHAR"/>
+        <result column="nation_id" property="nationId" jdbcType="INTEGER"/>
+        <result column="native_place" property="nativePlace" jdbcType="VARCHAR"/>
+        <result column="politic_id" property="politicId" jdbcType="INTEGER"/>
+        <result column="department_id" property="departmentId" jdbcType="INTEGER"/>
+        <result column="job_level_id" property="jobLevelId" jdbcType="INTEGER"/>
+        <result column="pos_id" property="posId" jdbcType="INTEGER"/>
+        <result column="engage_form" property="engageForm" jdbcType="VARCHAR"/>
+        <result column="tip_top_degree" property="tiptopDegree" jdbcType="VARCHAR"/>
+        <result column="begin_date" property="beginDate" jdbcType="DATE"/>
+        <result column="work_state" property="workState" jdbcType="VARCHAR"/>
+        <result column="work_id" property="workID" jdbcType="VARCHAR"/>
+        <result column="contract_term" property="contractTerm" jdbcType="DOUBLE"/>
+        <result column="conversion_time" property="conversionTime" jdbcType="DATE"/>
+        <result column="not_work_date" property="notWorkDate" jdbcType="DATE"/>
+        <result column="begin_contract" property="beginDate" jdbcType="DATE"/>
+        <result column="end_contract" property="endContract" jdbcType="DATE"/>
+        <result column="work_age" property="workAge" jdbcType="INTEGER"/>
         <association property="salary" javaType="org.javaboy.vhr.framework.entity.Salary">
             <id column="sid" property="id" jdbcType="INTEGER"/>
             <result column="sbasicSalary" property="basicSalary" jdbcType="INTEGER"/>
