@@ -11,7 +11,7 @@
         <el-table-column label="所属部门" align="center">
           <template #default="scope">
             <el-tooltip placement="right" v-if="scope.row.salary">
-              <div slot="content">
+              <template #content>
                 <table>
                   <tr>
                     <td>基本工资</td>
@@ -58,7 +58,7 @@
                     <td>{{scope.row.salary.createDate}}</td>
                   </tr>
                 </table>
-              </div>
+              </template>
               <el-tag>{{scope.row.salary.name}}</el-tag>
             </el-tooltip>
             <el-tag v-else>暂未设置</el-tag>
@@ -83,7 +83,9 @@
                   </el-option>
                 </el-select>
               </div>
-              <el-button slot="reference" type="danger">修改工资账套</el-button>
+              <template #reference>
+                <el-button  type="danger">修改工资账套</el-button>
+              </template>
             </el-popover>
           </template>
         </el-table-column>
