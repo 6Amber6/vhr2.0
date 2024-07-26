@@ -103,7 +103,7 @@
 
 <script>
 import { ref, onMounted } from 'vue';
-import {loadSalary} from "@/api/salary.js";
+import {loadSobCfg} from "@/api/sobCfg.js";
 
 export default {
   name: "SalSobCfg",
@@ -116,14 +116,14 @@ export default {
     const salaries = ref([]);
 
     const initSalaries = async () => {
-      const resp = await loadSalary();
+      const resp = await loadSobCfg();
       if (resp) {
         salaries.value = resp;
       }
     };
 
     const initEmps = async () => {
-      const resp = await loadSalary(currentPage.value, currentSize.value);
+      const resp = await loadSobCfg(currentPage.value, currentSize.value);
       if (resp) {
         emps.value = resp.data;
         total.value = resp.total;

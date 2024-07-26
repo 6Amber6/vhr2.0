@@ -1,13 +1,11 @@
 import request from "@/utils/request.js";
 
 
-export const loadSalary = (currentPage, currentSize) => {
-    let url = '/api/salary/sobcfg/';
-    if (currentPage != null && currentSize != null) {
-        url = url + `?page=${currentPage}&size=${currentSize}`
-    }
+export const loadSalary = () => {
+    let url = '/api/salary/sobcfg/salaries';
     return request({
         url: url,
         method: 'get'
     })
 }
+

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="org.javaboy.vhr.framework.mapper">
+<mapper namespace="org.javaboy.vhr.framework.mapper.SalaryMapper">
     <resultMap id="BaseResultMap" type="org.javaboy.vhr.framework.entity.Salary">
         <id column="id" property="id" jdbcType="INTEGER"/>
-        <result column="basicSalary" property="basicSalary" jdbcType="INTEGER"/>
+        <result column="basic_salary" property="basicSalary" jdbcType="INTEGER"/>
         <result column="bonus" property="bonus" jdbcType="INTEGER"/>
-        <result column="lunchSalary" property="lunchSalary" jdbcType="INTEGER"/>
-        <result column="trafficSalary" property="trafficSalary" jdbcType="INTEGER"/>
-        <result column="allSalary" property="allSalary" jdbcType="INTEGER"/>
-        <result column="pensionBase" property="pensionBase" jdbcType="INTEGER"/>
-        <result column="pensionPer" property="pensionPer" jdbcType="REAL"/>
-        <result column="createDate" property="createDate" jdbcType="TIMESTAMP"/>
-        <result column="medicalBase" property="medicalBase" jdbcType="INTEGER"/>
-        <result column="medicalPer" property="medicalPer" jdbcType="REAL"/>
-        <result column="accumulationFundBase" property="accumulationFundBase" jdbcType="INTEGER"/>
-        <result column="accumulationFundPer" property="accumulationFundPer" jdbcType="REAL"/>
+        <result column="lunch_salary" property="lunchSalary" jdbcType="INTEGER"/>
+        <result column="traffic_salary" property="trafficSalary" jdbcType="INTEGER"/>
+        <result column="all_salary" property="allSalary" jdbcType="INTEGER"/>
+        <result column="pension_base" property="pensionBase" jdbcType="INTEGER"/>
+        <result column="pension_per" property="pensionPer" jdbcType="REAL"/>
+        <result column="create_date" property="createDate" jdbcType="TIMESTAMP"/>
+        <result column="medical_base" property="medicalBase" jdbcType="INTEGER"/>
+        <result column="medical_per" property="medicalPer" jdbcType="REAL"/>
+        <result column="accumulation_fund_base" property="accumulationFundBase" jdbcType="INTEGER"/>
+        <result column="accumulation_fund_per" property="accumulationFundPer" jdbcType="REAL"/>
         <result column="name" property="name" jdbcType="VARCHAR"/>
     </resultMap>
     <sql id="Base_Column_List">
-    id, basicSalary, bonus, lunchSalary, trafficSalary, allSalary, pensionBase, pensionPer, 
-    createDate, medicalBase, medicalPer, accumulationFundBase, accumulationFundPer, name
+    id, basic_salary, bonus, lunch_salary, traffic_salary, all_salary, pension_base, pension_per,
+    create_date, medical_base, medical_per, accumulation_fund_base, accumulation_fund_per, name
   </sql>
     <select id="getAllSalaries" resultMap="BaseResultMap">
         select
