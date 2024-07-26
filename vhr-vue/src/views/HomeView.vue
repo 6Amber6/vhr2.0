@@ -1,8 +1,8 @@
 <template>
   <div>
     <el-container>
-      <el-header style="background-color: #02adff;align-items: center;display: flex;justify-content: space-between">
-        <div style="font-family: 华文行楷;font-size: 30px">微人事</div>
+      <el-header style="background-color: #87CFFA;align-items: center;display: flex;justify-content: space-between">
+        <div style="font-family: 华文行楷;font-size: 28px;color: #252525">微人事</div>
         <div>
           <el-dropdown style="cursor:pointer;" @command="menuHandle">
     <span class="el-dropdown-link" style="display: flex;align-items: center">
@@ -43,7 +43,7 @@
             <el-breadcrumb-item :to="{ path: '/home' }">主页</el-breadcrumb-item>
             <el-breadcrumb-item>{{ proxy.$router.currentRoute.value.name }}</el-breadcrumb-item>
           </el-breadcrumb>
-          <div v-if="proxy.$router.currentRoute.value.path=='/home'" style="font-size: 35px;font-family: 华文行楷;color: red;text-align: center">欢迎来到微人事脚手架！</div>
+          <div v-if="proxy.$router.currentRoute.value.path=='/home'" style="font-size: 40px;font-family: 华文行楷;color: #6495ED;text-align: center;margin-top: 50px;">欢迎来到微人事脚手架！</div>
           <RouterView/>
         </el-main>
       </el-container>

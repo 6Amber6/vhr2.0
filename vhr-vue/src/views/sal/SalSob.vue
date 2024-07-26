@@ -84,13 +84,13 @@
                 </el-select>
               </div>
               <template #reference>
-                <el-button  type="danger">修改工资账套</el-button>
+                <el-button type="warning" round>修改工资账套</el-button>
               </template>
             </el-popover>
           </template>
         </el-table-column>
       </el-table>
-      <div style="display: flex;justify-content: flex-end">
+      <div style="display: flex;justify-content: flex-end;" >
         <el-pagination
             background
             @size-change="sizeChange"
@@ -120,7 +120,7 @@ export default {
     const initSalaries = async () => {
       const resp = await loadSalary();
       if (resp) {
-        salaries.value = resp;
+        salaries.value = resp.data;
       }
     };
 

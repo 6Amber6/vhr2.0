@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="test">
         员工调动
     </div>
 </template>
@@ -11,5 +11,10 @@
 </script>
 
 <style scoped>
-
+  .test{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #87CFFA;
+  }
 </style>

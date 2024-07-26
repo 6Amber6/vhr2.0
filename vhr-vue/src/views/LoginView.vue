@@ -35,8 +35,8 @@
       </div>
       <template #footer>
         <div style="display: flex;justify-content: center">
-          <el-button>重置</el-button>
-          <el-button type="primary" @click="loginHandle">登录</el-button>
+          <el-button type="warning" round>重置</el-button>
+          <el-button type="success" @click="loginHandle" round>登录</el-button>
         </div>
       </template>
     </el-card>
