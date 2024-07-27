@@ -146,6 +146,7 @@ export default {
       initEmps();
     };
 
+    //TODO 显示下拉框后不管有没有修改，再次隐藏时都会触发更新，造成无意义的性能开销和莫名其妙的弹框，可想办法解决
     const hidePop = async (data) => {
       if (currentSalary.value) {
         //重构函数为当前项目脚手架支持格式。currentSalary这个变量在currentChange函数(144行)中被赋值，不懂就问gpt
