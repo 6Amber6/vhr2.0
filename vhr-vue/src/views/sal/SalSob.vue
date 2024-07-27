@@ -104,9 +104,12 @@
 </template>
 
 <script>
+//TODO 把script标签内所有代码，扔给chatgpt，让他每行都生成注释
 import { ref, onMounted } from 'vue';
 import {loadSobCfg} from "@/api/sobCfg.js";
 import {loadSalary} from "@/api/salary.js";
+//从js文件引入updateSobCfg函数依赖
+import  {updateSobCfg} from "@/api/sobCfg.js";
 
 export default {
   name: "SalSobCfg",
@@ -145,7 +148,9 @@ export default {
 
     const hidePop = async (data) => {
       if (currentSalary.value) {
-        const resp = await putRequest(`/salary/sobcfg/?eid=${data.id}&sid=${currentSalary.value}`);
+        //重构函数为当前项目脚手架支持格式。currentSalary这个变量在currentChange函数(144行)中被赋值，不懂就问gpt
+        const resp = await updateSobCfg(data.id, currentSalary.value);
+        //如果后端有返回结果则为成功。重新初始化数据，加载套账信息
         if (resp) {
           initEmps();
         }

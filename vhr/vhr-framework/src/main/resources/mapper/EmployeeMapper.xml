@@ -114,6 +114,7 @@
             limit #{page},#{size}
         </if>
     </select>
+<!-- 如果你生气不要生气了，如果有点难过也不要难过啦~，昨天是我不对对不起，故意说话尖锐还特别暴躁，但是我们的确不合适，希望你找到更好的，好好生活，拜拜❤ -->
     <insert id="updateEmployeeSalaryById">
         REPLACE INTO empsalary (eid,sid) VALUES(#{eid},#{sid})
     </insert>
